@@ -15,7 +15,7 @@ public class WordCountFromBatch {
         // num of task parallelism
         env.setParallelism(1);
 
-        DataStream<String> stream = env.fromElements("hello world", "hello world world");
+        DataStream<String> stream = env.fromElements("hello world world", "hello world world");
 
 
         SingleOutputStreamOperator<Tuple2<String, Integer>> result = stream
